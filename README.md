@@ -2,17 +2,15 @@
 
 <h1 align="center"> Contador Hexadecimal de 7 Segmentos con Control de Estado </h1>
 
-> **Asignatura:** Electrónica Digital II - FCEFyN.
+> **Asignatura:** Electrónica Digital II.
+> **Integrantes:** [Nombre y Apellido 1], [Nombre y Apellido 2], [Nombre y Apellido 3] (Grupo 09).
+> **Docente:** [Nombre del docente].
 
-> **Integrantes(Grupo 09):** Belloso Rossi Rodrigo, Curtino Velaz Santiago, Guevara Lucas Daniel, Ibarra Giovanni Emanuel,Soto Debesa Trinidad Zoe .
-
-> **Docente:** Ing. Marcos J. Blasco.
-
->**Scrum Master:** Agustin Dalmazzo
 # Índice
 
 - [Descripción del proyecto](#descripción-del-proyecto)
-- [Alcance del proyecto](#alcance-del-proyecto)
+- [Estructura del repositorio](#estructura-del-repositorio)
+- [Alcance del proyecto (Historias de Usuario)](#alcance-del-proyecto-historias-de-usuario)
 - [Arquitectura del sistema: hardware y software](#arquitectura-del-sistema-hardware-y-software)
 - [Definición de Terminado (DoD)](#definición-de-terminado-dod)
 - [Instrucciones de Simulación](#instrucciones-de-simulación)
@@ -21,7 +19,17 @@
 
 El presente proyecto consiste en el diseño e implementación de un contador hexadecimal interactivo basado en el microcontrolador PIC16F887. El sistema muestra una secuencia de caracteres hexadecimales (0 al F) a través de un display de 7 segmentos y permite al usuario controlar el flujo del conteo mediante un pulsador físico. Todo el firmware ha sido desarrollado íntegramente en lenguaje Ensamblador (ASM).
 
-## Alcance del proyecto
+## Estructura del repositorio
+
+El proyecto se encuentra organizado de la siguiente manera:
+
+- 📄 `README.md`: Descripción del trabajo práctico, historias de usuario y funcionamiento del sistema (este archivo).
+- 📁 `[Nombre de la carpeta del código]`: Carpeta que contiene el código fuente escrito en Ensamblador (`.asm`).
+- 📁 `[Nombre de la carpeta de Proteus]`: Carpeta con los archivos correspondientes a la simulación del circuito.
+- 📁 `[Nombre de la carpeta de diagramas]`: Directorio destinado a los diagramas de flujo y capturas del esquemático.
+- ⚙️ `[Nombre_del_archivo].hex`: Archivo ejecutable generado tras la compilación, listo para ser cargado en el microcontrolador o en la simulación de Proteus. *(Nota: Asegurate de cambiar el nombre entre corchetes por el nombre real de tu archivo).*
+
+## Alcance del proyecto (Historias de Usuario)
 
 El sistema está diseñado para cumplir con las siguientes funcionalidades principales:
 
@@ -48,7 +56,7 @@ El sistema cuenta con un pulsador (mapeado en el pin RB0) que altera el comporta
 - **Entradas:** El pin RB0 está configurado como entrada digital pura. Se configuraron los registros `ANSEL` y `ANSELH` para deshabilitar las funciones analógicas y aislar la lectura digital del botón.
 - **Salidas:** El display de 7 segmentos se encuentra mapeado al **Puerto [BORRAR EL QUE NO USEN: C / D]** para recibir los patrones de bits correspondientes.
 
-## Definición de Terminado (DoD)
+## Definición de Terminado (DoD) - Criterios de Aprobación
 
 El proyecto cumple con los estándares de calidad estipulados por la cátedra:
 - Código fuente escrito 100% en Ensamblador (`.asm`), compilando sin errores ni warnings para la generación del ejecutable `.hex`.
@@ -60,7 +68,7 @@ El proyecto cumple con los estándares de calidad estipulados por la cátedra:
 ## Instrucciones de Simulación
 
 1. Abrir el proyecto en el entorno de desarrollo y compilar el código `.asm` para generar el archivo `.hex`.
-2. Abrir el esquemático del circuito en **Proteus**.
-3. Hacer doble clic sobre el microcontrolador PIC16F887, buscar la carpeta `Program File` y cargar el archivo `.hex` generado en el paso anterior.
+2. Abrir el esquemático del circuito en la carpeta de **Proteus**.
+3. Hacer doble clic sobre el microcontrolador PIC16F887, buscar la carpeta `Program File` y cargar el archivo `.hex` que se encuentra en el repositorio.
 4. Iniciar la simulación.
 5. Observar el conteo inicial y utilizar el pulsador conectado en RB0 para iterar entre los estados de pausa, descenso y ascenso.
