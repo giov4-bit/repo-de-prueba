@@ -5,10 +5,15 @@
 > **Asignatura:** Electrónica Digital II- FCEFyN
 
 > **Integrantes(Grupo 09):**
+
 Belloso Rossi Rodrigo
+
 Curtino Velaz Santiago
+
 Guevara Lucas Daniel
+
 Ibarra Giovani Emmanuel
+
 Soto Debesa Trinidad Zoe
 
 > **Docente:**  Ing. Marcos J. Blasco.
