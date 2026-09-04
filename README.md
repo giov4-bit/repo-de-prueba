@@ -68,7 +68,7 @@ El sistema cuenta con un pulsador (mapeado en el pin RB0) que altera el comporta
 ### Diagrama de bloques
 
 <p align="center">
-  <img src="diagramas/diagrama_bloques.jpeg" alt="Diagrama de Bloques" width="450">
+  <img src="diagrama_bloques.jpeg.jpeg" alt="Diagrama de Bloques" width="450">
 </p>
 <p align="center"><i>Diagrama de bloques general del sistema.</i></p>
 
