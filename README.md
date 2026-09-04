@@ -2,8 +2,13 @@
 
 <h1 align="center"> Contador Hexadecimal de 7 Segmentos con Control de Estado </h1>
 
-> **Asignatura:** Electrónica Digital II.
-> **Integrantes:** [Nombre y Apellido 1], [Nombre y Apellido 2], [Nombre y Apellido 3] (Grupo 09).
+> **Asignatura:** Electrónica Digital II- FCEFyN
+> **Integrantes(Grupo 09):**
+Belloso Rossi Rodrigo
+Curtino Velaz Santiago
+Guevara Lucas Daniel
+Ibarra Giovani Emmanuel
+Soto Debesa Trinidad Zoe .
 > **Docente:** [Nombre del docente].
 
 # Índice
