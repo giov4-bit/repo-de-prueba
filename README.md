@@ -3,13 +3,15 @@
 <h1 align="center"> Contador Hexadecimal de 7 Segmentos con Control de Estado </h1>
 
 > **Asignatura:** Electrónica Digital II- FCEFyN
+
 > **Integrantes(Grupo 09):**
-Belloso Rossi Rodrigo
-Curtino Velaz Santiago
-Guevara Lucas Daniel
-Ibarra Giovani Emmanuel
-Soto Debesa Trinidad Zoe .
-> **Docente:** [Nombre del docente].
+Belloso Rossi Rodrigo,
+Curtino Velaz Santiago,
+Guevara Lucas Daniel,
+Ibarra Giovani Emmanuel,
+Soto Debesa Trinidad Zoe.
+
+> **Docente:**  Ing. Marcos J. Blasco.
 
 # Índice
 
@@ -61,7 +63,7 @@ El sistema cuenta con un pulsador (mapeado en el pin RB0) que altera el comporta
 - **Entradas:** El pin RB0 está configurado como entrada digital pura. Se configuraron los registros `ANSEL` y `ANSELH` para deshabilitar las funciones analógicas y aislar la lectura digital del botón.
 - **Salidas:** El display de 7 segmentos se encuentra mapeado al **Puerto [BORRAR EL QUE NO USEN: C / D]** para recibir los patrones de bits correspondientes.
 
-## Definición de Terminado (DoD) - Criterios de Aprobación
+## Definición de Terminado (DoD)
 
 El proyecto cumple con los estándares de calidad estipulados por la cátedra:
 - Código fuente escrito 100% en Ensamblador (`.asm`), compilando sin errores ni warnings para la generación del ejecutable `.hex`.
