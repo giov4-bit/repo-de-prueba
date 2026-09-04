@@ -2,14 +2,17 @@
 
 <h1 align="center"> Contador Hexadecimal de 7 Segmentos con Control de Estado </h1>
 
-> **Asignatura:** Electrónica Digital II.
-> **Integrantes:** [Nombre y Apellido 1], [Nombre y Apellido 2], [Nombre y Apellido 3] (Grupo 09).
-> **Docente:** [Nombre del docente].
+> **Asignatura:** Electrónica Digital II - FCEFyN.
 
+> **Integrantes(Grupo 09):** Belloso Rossi Rodrigo, Curtino Velaz Santiago, Guevara Lucas Daniel, Ibarra Giovanni Emanuel,Soto Debesa Trinidad Zoe .
+
+> **Docente:** Ing. Marcos J. Blasco.
+
+>**Scrum Master:** Agustin Dalmazzo
 # Índice
 
 - [Descripción del proyecto](#descripción-del-proyecto)
-- [Alcance del proyecto (Historias de Usuario)](#alcance-del-proyecto-historias-de-usuario)
+- [Alcance del proyecto](#alcance-del-proyecto)
 - [Arquitectura del sistema: hardware y software](#arquitectura-del-sistema-hardware-y-software)
 - [Definición de Terminado (DoD)](#definición-de-terminado-dod)
 - [Instrucciones de Simulación](#instrucciones-de-simulación)
@@ -18,7 +21,7 @@
 
 El presente proyecto consiste en el diseño e implementación de un contador hexadecimal interactivo basado en el microcontrolador PIC16F887. El sistema muestra una secuencia de caracteres hexadecimales (0 al F) a través de un display de 7 segmentos y permite al usuario controlar el flujo del conteo mediante un pulsador físico. Todo el firmware ha sido desarrollado íntegramente en lenguaje Ensamblador (ASM).
 
-## Alcance del proyecto (Historias de Usuario)
+## Alcance del proyecto
 
 El sistema está diseñado para cumplir con las siguientes funcionalidades principales:
 
@@ -45,7 +48,7 @@ El sistema cuenta con un pulsador (mapeado en el pin RB0) que altera el comporta
 - **Entradas:** El pin RB0 está configurado como entrada digital pura. Se configuraron los registros `ANSEL` y `ANSELH` para deshabilitar las funciones analógicas y aislar la lectura digital del botón.
 - **Salidas:** El display de 7 segmentos se encuentra mapeado al **Puerto [BORRAR EL QUE NO USEN: C / D]** para recibir los patrones de bits correspondientes.
 
-## Definición de Terminado (DoD) - Criterios de Aprobación
+## Definición de Terminado (DoD)
 
 El proyecto cumple con los estándares de calidad estipulados por la cátedra:
 - Código fuente escrito 100% en Ensamblador (`.asm`), compilando sin errores ni warnings para la generación del ejecutable `.hex`.
