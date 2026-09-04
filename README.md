@@ -2,21 +2,15 @@
 
 <h1 align="center"> Contador Hexadecimal de 7 Segmentos con Control de Estado </h1>
 
-> **Asignatura:** Electrónica Digital II- FCEFyN
-
-> **Integrantes(Grupo 09):**
-
-Belloso Rossi Rodrigo
-
-Curtino Velaz Santiago
-
-Guevara Lucas Daniel
-
-Ibarra Giovani Emmanuel
-
-Soto Debesa Trinidad Zoe
-
-> **Docente:**  Ing. Marcos J. Blasco.
+> **Asignatura:** Electrónica Digital II - FCEFyN  
+> **Integrantes (Grupo 09):**  
+> - Belloso Rossi Rodrigo  
+> - Curtino Velaz Santiago  
+> - Guevara Lucas Daniel  
+> - Ibarra Giovani Emmanuel  
+> - Soto Debesa Trinidad Zoe  
+>  
+> **Docente:** Ing. Marcos J. Blasco.
 
 # Índice
 
@@ -24,6 +18,9 @@ Soto Debesa Trinidad Zoe
 - [Estructura del repositorio](#estructura-del-repositorio)
 - [Alcance del proyecto (Historias de Usuario)](#alcance-del-proyecto-historias-de-usuario)
 - [Arquitectura del sistema: hardware y software](#arquitectura-del-sistema-hardware-y-software)
+  - [Diagrama de bloques](#diagrama-de-bloques)
+  - [Esquemático del circuito](#esquemático-del-circuito)
+  - [Diagrama de flujo](#diagrama-de-flujo)
 - [Definición de Terminado (DoD)](#definición-de-terminado-dod)
 - [Instrucciones de Simulación](#instrucciones-de-simulación)
 
@@ -36,10 +33,10 @@ El presente proyecto consiste en el diseño e implementación de un contador hex
 El proyecto se encuentra organizado de la siguiente manera:
 
 - 📄 `README.md`: Descripción del trabajo práctico, historias de usuario y funcionamiento del sistema (este archivo).
-- 📁 `[Nombre de la carpeta del código]`: Carpeta que contiene el código fuente escrito en Ensamblador (`.asm`).
-- 📁 `[Nombre de la carpeta de Proteus]`: Carpeta con los archivos correspondientes a la simulación del circuito.
-- 📁 `[Nombre de la carpeta de diagramas]`: Directorio destinado a los diagramas de flujo y capturas del esquemático.
-- ⚙️ `[Nombre_del_archivo].hex`: Archivo ejecutable generado tras la compilación, listo para ser cargado en el microcontrolador o en la simulación de Proteus. *(Nota: Asegurate de cambiar el nombre entre corchetes por el nombre real de tu archivo).*
+- 📁 `src/`: Carpeta que contiene el código fuente escrito en Ensamblador (`.asm`).
+- 📁 `proteus/`: Carpeta con los archivos correspondientes a la simulación del circuito.
+- 📁 `diagramas/`: Directorio destinado a las imágenes de diagramas de flujo, bloques y esquemáticos.
+- ⚙️ `main.hex`: Archivo ejecutable generado tras la compilación, listo para ser cargado en el microcontrolador o en la simulación de Proteus.
 
 ## Alcance del proyecto (Historias de Usuario)
 
@@ -65,8 +62,29 @@ El sistema cuenta con un pulsador (mapeado en el pin RB0) que altera el comporta
 - **Microcontrolador:** PIC16F887.
 - **Lenguaje:** Ensamblador (ASM).
 - **Manejo de Memoria:** La decodificación del display de 7 segmentos se realiza mediante una tabla de memoria utilizando la instrucción `addwf PCL, F`, garantizando un retorno seguro sin desbordamientos con `retlw`.
-- **Entradas:** El pin RB0 está configurado como entrada digital pura. Se configuraron los registros `ANSEL` y `ANSELH` para deshabilitar las funciones analógicas y aislar la lectura digital del botón.
-- **Salidas:** El display de 7 segmentos se encuentra mapeado al **Puerto [BORRAR EL QUE NO USEN: C / D]** para recibir los patrones de bits correspondientes.
+- **Entradas:** El pin RB0 está configurado como entrada digital pura con resistencia de pull-down (10 kΩ). Se configuraron los registros `ANSEL` y `ANSELH` para deshabilitar las funciones analógicas y aislar la lectura del botón.
+- **Salidas:** El display de 7 segmentos se encuentra mapeado al **Puerto D** (pines RD0 a RD7) con resistencias limitadoras de corriente de 330 Ω por cada segmento.
+
+### Diagrama de bloques
+
+<p align="center">
+  <img src="diagramas/diagrama_bloques.jpeg" alt="Diagrama de Bloques" width="450">
+</p>
+<p align="center"><i>Diagrama de bloques general del sistema.</i></p>
+
+### Esquemático del circuito
+
+<p align="center">
+  <img src="proteus/esquematico.jpg" alt="Esquemático del circuito en Proteus" width="700">
+</p>
+<p align="center"><i>Diseño del circuito en Proteus con PIC16F887, display en Puerto D y pulsador en RB0.</i></p>
+
+### Diagrama de flujo
+
+<p align="center">
+  <img src="diagramas/diagrama_flujo.jpeg" alt="Diagrama de Flujo" width="450">
+</p>
+<p align="center"><i>Diagrama de flujo de la lógica de control y estados del programa.</i></p>
 
 ## Definición de Terminado (DoD)
 
@@ -81,6 +99,6 @@ El proyecto cumple con los estándares de calidad estipulados por la cátedra:
 
 1. Abrir el proyecto en el entorno de desarrollo y compilar el código `.asm` para generar el archivo `.hex`.
 2. Abrir el esquemático del circuito en la carpeta de **Proteus**.
-3. Hacer doble clic sobre el microcontrolador PIC16F887, buscar la carpeta `Program File` y cargar el archivo `.hex` que se encuentra en el repositorio.
+3. Hacer doble clic sobre el microcontrolador PIC16F887, buscar el campo `Program File` y cargar el archivo `.hex` generado.
 4. Iniciar la simulación.
 5. Observar el conteo inicial y utilizar el pulsador conectado en RB0 para iterar entre los estados de pausa, descenso y ascenso.
