@@ -75,7 +75,7 @@ El sistema cuenta con un pulsador (mapeado en el pin RB0) que altera el comporta
 ### Esquemático del circuito
 
 <p align="center">
-  <img src="esquema.jpg.jpeg" alt="Esquemático del circuito en Proteus" width="700">
+  <img src="esquematico.jpg.jpeg" alt="Esquemático del circuito en Proteus" width="700">
 </p>
 <p align="center"><i>Diseño del circuito en Proteus con PIC16F887, display en Puerto D y pulsador en RB0.</i></p>
 
